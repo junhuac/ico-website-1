@@ -10,9 +10,12 @@ class MainDashboard extends React.Component{
   }
 
   render(){
-    return <div >
-      		mainDashboard change
+    return (
+
+    <div>
+      		mainDashboard changes
       </div>
+    )
   }
 }
 
