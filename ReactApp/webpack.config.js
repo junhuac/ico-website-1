@@ -3,12 +3,12 @@ var webpack = require('webpack');
 
 console.log(__dirname);
 module.exports = {
-  entry: './components/mainDashboard.jsx',
+  entry: './components/app.jsx',
   output: {
     path: path.resolve(__dirname, '../public/javascripts/build'),
     filename: "app.js",
   },
-  devServer: { 
+  devServer: {
    inline: true, // Hot Reloading
    port: 3333 // It is the port where is going to work the server
  },
@@ -27,6 +27,14 @@ module.exports = {
       }
     ]
   }
+  ,
+  plugins: [
+      new webpack.ProvidePlugin({
+         $: "jquery",
+         jQuery: "jquery",
+         "window.jQuery": "jquery"
+     })
+  ]
 };
 
 /*
@@ -39,9 +47,9 @@ module.exports = {
           presets: ['es2015', 'react']
         }
       },
-        
+
       { test: /\.css$/, loader: "style-loader!css-loader" }
-      
+
     ]
   }
 };
