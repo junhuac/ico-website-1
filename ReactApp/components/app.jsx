@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-bootstrap = require('bootstrap');
+// global.Tether = tether;
+// import tether from 'tether';
+window.Popper = Popper;
+import Popper from 'popper.js';
+//bootstrap = require('bootstrap');
 
 class App extends React.Component{
   constructor(props){
@@ -9,12 +13,9 @@ class App extends React.Component{
 
   render(){
     return (
-
-      <div className="container-fluid">
         <div className="row no-gutters">
-          <p className="col-12 text-right">Express</p>
+          <p className="col-4 text-right">Express Federico jaramillo work</p>
         </div>
-      </div>
 
     )
   }
@@ -24,4 +25,5 @@ class App extends React.Component{
 ReactDOM.render(
   <App/>,
   document.getElementById('app')
+  
 );
